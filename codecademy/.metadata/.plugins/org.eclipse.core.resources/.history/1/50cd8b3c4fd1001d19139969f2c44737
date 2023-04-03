@@ -1,0 +1,14 @@
+package chap3;
+
+import java.util.HashMap;
+
+public class testHashMap {
+	
+	public static void main(String[] args) {
+		HashMap<String, Integer> teaSteepingTemp = new HashMap<>();
+		teaSteepingTemp.put("Oolong", 185);
+		teaSteepingTemp.put("Rooibos", 212);
+		System.out.println(teaSteepingTemp);
+
+	}
+}

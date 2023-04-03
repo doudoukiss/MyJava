@@ -1,0 +1,13 @@
+package chap4DP;
+
+public class Knapsack {
+	  static int knapSack (int weightCap, int weights[], int values[], int i)
+	  {        
+	    if (i == 0 || weightCap == 0) {
+	      return 0;
+	    }
+	    else if (weights[i - 1] > weightCap) {
+	      return knapSack (weightCap, weights, values, i - 1);
+	    } 
+	  }
+	}
