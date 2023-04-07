@@ -1,3 +1,4 @@
+// 这道题有点问题 需要再研究 卡了太久时间 先跳过
 import java.util.Scanner;
 
 public class TakeOutSimulator{
