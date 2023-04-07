@@ -1,5 +1,5 @@
 
 public interface IntUserInputRetriever<T> {
-	T produceOutputOnIntUserInput(int selection) throws InvalidStateException;
+	T produceOutputOnIntUserInput(int selection) throws IllegalArgumentException;
 
 }
