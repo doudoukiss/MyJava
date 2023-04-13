@@ -1,11 +1,10 @@
-// Magic 8-Ball 🎱
 
 let playerName = "Galina"
 
 let playerQuestion = "Will there be any more snowfall in New York for winter 2020? ❄️" 
 
 let randomNumber = Int.random(in: 1...9)
-// print(randomNumber)
+
 let eightBall: String 
 
 switch randomNumber {
