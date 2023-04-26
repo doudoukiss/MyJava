@@ -11,7 +11,7 @@ import SwiftUI
 struct YoungStarsAppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            WelcomeView()
         }
     }
 }
