@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D15D5C12A0B5AE000F2733B /* RecipeCategoryGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D15D5C02A0B5AE000F2733B /* RecipeCategoryGridView.swift */; };
 		3D20F27A2A068A9D006C7768 /* GrouponApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D20F2792A068A9D006C7768 /* GrouponApp.swift */; };
 		3D20F27C2A068A9D006C7768 /* RecipesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D20F27B2A068A9D006C7768 /* RecipesListView.swift */; };
 		3D20F27E2A068A9E006C7768 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D20F27D2A068A9E006C7768 /* Assets.xcassets */; };
@@ -15,9 +16,11 @@
 		3D20F28D2A06A65D006C7768 /* RecipeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D20F28C2A06A65D006C7768 /* RecipeData.swift */; };
 		3D20F28F2A06A97B006C7768 /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D20F28E2A06A97B006C7768 /* RecipeDetailView.swift */; };
 		3D20F2912A06B405006C7768 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D20F2902A06B405006C7768 /* AppColor.swift */; };
+		3D3AEDFB2A1A0DA600891487 /* ModifyRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3AEDFA2A1A0DA600891487 /* ModifyRecipeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D15D5C02A0B5AE000F2733B /* RecipeCategoryGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCategoryGridView.swift; sourceTree = "<group>"; };
 		3D20F2762A068A9D006C7768 /* Groupon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Groupon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D20F2792A068A9D006C7768 /* GrouponApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrouponApp.swift; sourceTree = "<group>"; };
 		3D20F27B2A068A9D006C7768 /* RecipesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesListView.swift; sourceTree = "<group>"; };
@@ -27,6 +30,7 @@
 		3D20F28C2A06A65D006C7768 /* RecipeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeData.swift; sourceTree = "<group>"; };
 		3D20F28E2A06A97B006C7768 /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
 		3D20F2902A06B405006C7768 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
+		3D3AEDFA2A1A0DA600891487 /* ModifyRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyRecipeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,8 +93,8 @@
 		3D20F28A2A06A513006C7768 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				3D20F27B2A068A9D006C7768 /* RecipesListView.swift */,
-				3D20F28E2A06A97B006C7768 /* RecipeDetailView.swift */,
+				3D3AEDF92A1A0B4700891487 /* ModifyRecipes */,
+				3D3AEDF82A1A0B3600891487 /* ExploreRecipes */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -101,6 +105,24 @@
 				3D20F2872A06937C006C7768 /* Recipe.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		3D3AEDF82A1A0B3600891487 /* ExploreRecipes */ = {
+			isa = PBXGroup;
+			children = (
+				3D20F27B2A068A9D006C7768 /* RecipesListView.swift */,
+				3D20F28E2A06A97B006C7768 /* RecipeDetailView.swift */,
+				3D15D5C02A0B5AE000F2733B /* RecipeCategoryGridView.swift */,
+			);
+			path = ExploreRecipes;
+			sourceTree = "<group>";
+		};
+		3D3AEDF92A1A0B4700891487 /* ModifyRecipes */ = {
+			isa = PBXGroup;
+			children = (
+				3D3AEDFA2A1A0DA600891487 /* ModifyRecipeView.swift */,
+			);
+			path = ModifyRecipes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,7 +197,9 @@
 			files = (
 				3D20F2882A06937C006C7768 /* Recipe.swift in Sources */,
 				3D20F28F2A06A97B006C7768 /* RecipeDetailView.swift in Sources */,
+				3D15D5C12A0B5AE000F2733B /* RecipeCategoryGridView.swift in Sources */,
 				3D20F28D2A06A65D006C7768 /* RecipeData.swift in Sources */,
+				3D3AEDFB2A1A0DA600891487 /* ModifyRecipeView.swift in Sources */,
 				3D20F27C2A068A9D006C7768 /* RecipesListView.swift in Sources */,
 				3D20F27A2A068A9D006C7768 /* GrouponApp.swift in Sources */,
 				3D20F2912A06B405006C7768 /* AppColor.swift in Sources */,
