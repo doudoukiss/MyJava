@@ -17,6 +17,9 @@
 		3D20F28F2A06A97B006C7768 /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D20F28E2A06A97B006C7768 /* RecipeDetailView.swift */; };
 		3D20F2912A06B405006C7768 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D20F2902A06B405006C7768 /* AppColor.swift */; };
 		3D3AEDFB2A1A0DA600891487 /* ModifyRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3AEDFA2A1A0DA600891487 /* ModifyRecipeView.swift */; };
+		3D59BFE02A3DE9AE00FEF135 /* ModifyMainInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D59BFDF2A3DE9AE00FEF135 /* ModifyMainInformationView.swift */; };
+		3D59BFE22A3DFFC900FEF135 /* ModifyIngredientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D59BFE12A3DFFC900FEF135 /* ModifyIngredientView.swift */; };
+		3D59BFE42A3E7D7F00FEF135 /* ModifyIngredientsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D59BFE32A3E7D7F00FEF135 /* ModifyIngredientsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,9 @@
 		3D20F28E2A06A97B006C7768 /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
 		3D20F2902A06B405006C7768 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		3D3AEDFA2A1A0DA600891487 /* ModifyRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyRecipeView.swift; sourceTree = "<group>"; };
+		3D59BFDF2A3DE9AE00FEF135 /* ModifyMainInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyMainInformationView.swift; sourceTree = "<group>"; };
+		3D59BFE12A3DFFC900FEF135 /* ModifyIngredientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyIngredientView.swift; sourceTree = "<group>"; };
+		3D59BFE32A3E7D7F00FEF135 /* ModifyIngredientsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyIngredientsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +127,9 @@
 			isa = PBXGroup;
 			children = (
 				3D3AEDFA2A1A0DA600891487 /* ModifyRecipeView.swift */,
+				3D59BFDF2A3DE9AE00FEF135 /* ModifyMainInformationView.swift */,
+				3D59BFE12A3DFFC900FEF135 /* ModifyIngredientView.swift */,
+				3D59BFE32A3E7D7F00FEF135 /* ModifyIngredientsView.swift */,
 			);
 			path = ModifyRecipes;
 			sourceTree = "<group>";
@@ -200,9 +209,12 @@
 				3D15D5C12A0B5AE000F2733B /* RecipeCategoryGridView.swift in Sources */,
 				3D20F28D2A06A65D006C7768 /* RecipeData.swift in Sources */,
 				3D3AEDFB2A1A0DA600891487 /* ModifyRecipeView.swift in Sources */,
+				3D59BFE42A3E7D7F00FEF135 /* ModifyIngredientsView.swift in Sources */,
 				3D20F27C2A068A9D006C7768 /* RecipesListView.swift in Sources */,
 				3D20F27A2A068A9D006C7768 /* GrouponApp.swift in Sources */,
+				3D59BFE02A3DE9AE00FEF135 /* ModifyMainInformationView.swift in Sources */,
 				3D20F2912A06B405006C7768 /* AppColor.swift in Sources */,
+				3D59BFE22A3DFFC900FEF135 /* ModifyIngredientView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
