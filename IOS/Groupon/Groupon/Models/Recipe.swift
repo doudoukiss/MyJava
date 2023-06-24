@@ -13,6 +13,7 @@ struct Recipe: Identifiable {
     var mainInformation: MainInformation
     var ingredients: [Ingredient]
     var directions: [Direction]
+    var isFavorite = false
     
     init() {
         self.init(mainInformation: MainInformation(name: "", description: "", author: "", category: .breakfast), ingredients: [], directions: [])
@@ -66,6 +67,16 @@ struct Ingredient: RecipeComponent {
     var quantity: Double
     var unit: Unit
     
+    init(name: String, quantity: Double, unit: Unit) {
+        self.name = name
+        self.quantity = quantity
+        self.unit = unit
+    }
+    
+    init() {
+        self.init(name: "", quantity: 1.0, unit: .none)
+    }
+    
     var description: String {
         let formattedQuantity = String(format: "%g", quantity)
         switch unit {
@@ -90,16 +101,6 @@ struct Ingredient: RecipeComponent {
         case none = "No units"
         
         var singularName: String { String(rawValue.dropLast()) }
-    }
-    
-    init(name: String, quantity: Double, unit: Unit) {
-        self.name = name
-        self.quantity = quantity
-        self.unit = unit
-    }
-    
-    init() {
-        self.init(name: "", quantity: 1.0, unit: .none)
     }
 }
 
