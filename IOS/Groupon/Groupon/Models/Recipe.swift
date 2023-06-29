@@ -16,7 +16,9 @@ struct Recipe: Identifiable {
     var isFavorite = false
     
     init() {
-        self.init(mainInformation: MainInformation(name: "", description: "", author: "", category: .breakfast), ingredients: [], directions: [])
+        self.init(mainInformation: MainInformation(name: "", description: "", author: "", category: .breakfast),
+                  ingredients: [],
+                  directions: [])
     }
     
     init(mainInformation: MainInformation, ingredients:[Ingredient], directions:[Direction]) {
@@ -27,6 +29,12 @@ struct Recipe: Identifiable {
     
     var isValid: Bool {
         mainInformation.isValid && !ingredients.isEmpty && !directions.isEmpty
+    }
+    
+    func index(of direction: Direction, excludingOptionalDirections: Bool) -> Int? {
+        let directions = directions.filter {excludingOptionalDirections ? !$0.isOptional : true }
+        let index = directions.firstIndex { $0.description == direction.description }
+        return index
     }
 }
 
