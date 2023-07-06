@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>790505323690-bu155t9v1qkkdg2n610teh95gihhg431.apps.googleusercontent.com</string>
+	<string>243269190918-51kb1nvslmadues805hp6a1fo0ksfbhb.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.790505323690-bu155t9v1qkkdg2n610teh95gihhg431</string>
+	<string>com.googleusercontent.apps.243269190918-51kb1nvslmadues805hp6a1fo0ksfbhb</string>
 	<key>API_KEY</key>
-	<string>AIzaSyBXsos7Mkftw4xnH40da7dLcCTNUXz9IPE</string>
+	<string>AIzaSyC0PNpWekPCEX8dvBRDmo6H97rLg1gJRGo</string>
 	<key>GCM_SENDER_ID</key>
-	<string>790505323690</string>
+	<string>243269190918</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.seattle.ai.Socialcademy</string>
 	<key>PROJECT_ID</key>
-	<string>socialcademy-3a76e</string>
+	<string>socialcademy-3b6c1</string>
 	<key>STORAGE_BUCKET</key>
-	<string>socialcademy-3a76e.appspot.com</string>
+	<string>socialcademy-3b6c1.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:790505323690:ios:df01ecf23dad3d495be4d3</string>
+	<string>1:243269190918:ios:d574fbc05d3f676d9c8a87</string>
 </dict>
 </plist>

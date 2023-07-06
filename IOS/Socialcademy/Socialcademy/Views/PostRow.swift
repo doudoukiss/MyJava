@@ -2,7 +2,7 @@
 //  PostRow.swift
 //  Socialcademy
 //
-//  Created by Seattle on 2023/7/4.
+//  Created by Seattle on 2023/7/6.
 //
 
 import SwiftUI
@@ -32,6 +32,9 @@ struct PostRow: View {
 
 struct PostRow_Previews: PreviewProvider {
     static var previews: some View {
-        PostRow(post: Post.testPost)
+        List {
+            PostRow(post: Post.testPost)
+        }
     }
 }
+
