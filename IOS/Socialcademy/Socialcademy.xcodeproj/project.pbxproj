@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3D4C0E5F2A56ED33000AA367 /* SocialcademyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4C0E5E2A56ED33000AA367 /* SocialcademyApp.swift */; };
-		3D4C0E612A56ED33000AA367 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4C0E602A56ED33000AA367 /* ContentView.swift */; };
 		3D4C0E632A56ED34000AA367 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D4C0E622A56ED34000AA367 /* Assets.xcassets */; };
 		3D4C0E662A56ED34000AA367 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D4C0E652A56ED34000AA367 /* Preview Assets.xcassets */; };
 		3D4C0E6E2A56EED5000AA367 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 3D4C0E6D2A56EED5000AA367 /* FirebaseAnalytics */; };
@@ -23,12 +22,12 @@
 		3D4C0E892A56F3F4000AA367 /* PostRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4C0E882A56F3F4000AA367 /* PostRow.swift */; };
 		3D4C0E8B2A56F40F000AA367 /* NewPostForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4C0E8A2A56F40F000AA367 /* NewPostForm.swift */; };
 		3DAB98E02A56F49D0084FEA5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3DAB98DF2A56F49C0084FEA5 /* GoogleService-Info.plist */; };
+		3DAB98E22A57B0270084FEA5 /* Alert+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAB98E12A57B0270084FEA5 /* Alert+Error.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3D4C0E5B2A56ED33000AA367 /* Socialcademy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Socialcademy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D4C0E5E2A56ED33000AA367 /* SocialcademyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialcademyApp.swift; sourceTree = "<group>"; };
-		3D4C0E602A56ED33000AA367 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3D4C0E622A56ED34000AA367 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D4C0E652A56ED34000AA367 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3D4C0E7C2A56F2AF000AA367 /* Loadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loadable.swift; sourceTree = "<group>"; };
@@ -40,6 +39,7 @@
 		3D4C0E882A56F3F4000AA367 /* PostRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRow.swift; sourceTree = "<group>"; };
 		3D4C0E8A2A56F40F000AA367 /* NewPostForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostForm.swift; sourceTree = "<group>"; };
 		3DAB98DF2A56F49C0084FEA5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3DAB98E12A57B0270084FEA5 /* Alert+Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alert+Error.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,14 +77,13 @@
 			children = (
 				3D4C0E5E2A56ED33000AA367 /* SocialcademyApp.swift */,
 				3DAB98DF2A56F49C0084FEA5 /* GoogleService-Info.plist */,
+				3D4C0E732A56EFE9000AA367 /* Views */,
+				3D4C0E742A56EFF2000AA367 /* Supporting Views */,
+				3D4C0E752A56F004000AA367 /* View Models */,
+				3D4C0E762A56F013000AA367 /* Repositories */,
+				3D4C0E772A56F026000AA367 /* Models */,
 				3D4C0E7B2A56F205000AA367 /* Utilities */,
 				3D4C0E7A2A56F1F9000AA367 /* Resources */,
-				3D4C0E772A56F026000AA367 /* Models */,
-				3D4C0E762A56F013000AA367 /* Repositories */,
-				3D4C0E752A56F004000AA367 /* View Models */,
-				3D4C0E742A56EFF2000AA367 /* Supporting Views */,
-				3D4C0E732A56EFE9000AA367 /* Views */,
-				3D4C0E602A56ED33000AA367 /* ContentView.swift */,
 				3D4C0E642A56ED34000AA367 /* Preview Content */,
 			);
 			path = Socialcademy;
@@ -112,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				3D4C0E842A56F3A3000AA367 /* EmptyListView.swift */,
+				3DAB98E12A57B0270084FEA5 /* Alert+Error.swift */,
 			);
 			path = "Supporting Views";
 			sourceTree = "<group>";
@@ -235,8 +235,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DAB98E22A57B0270084FEA5 /* Alert+Error.swift in Sources */,
 				3D4C0E812A56F351000AA367 /* PostsRepository.swift in Sources */,
-				3D4C0E612A56ED33000AA367 /* ContentView.swift in Sources */,
 				3D4C0E852A56F3A3000AA367 /* EmptyListView.swift in Sources */,
 				3D4C0E832A56F37B000AA367 /* PostsViewModel.swift in Sources */,
 				3D4C0E8B2A56F40F000AA367 /* NewPostForm.swift in Sources */,
