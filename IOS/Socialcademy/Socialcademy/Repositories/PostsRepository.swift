@@ -12,9 +12,12 @@ import FirebaseFirestoreSwift
 // MARK: - PostsRepositoryProtocol
 
 protocol PostsRepositoryProtocol {
-    func fetchPosts() async throws -> [Post]
+    func fetchAllPosts() async throws -> [Post]
+    func fetchFavoritePosts() async throws-> [Post]
     func create(_ post: Post) async throws
     func delete(_ post: Post) async throws
+    func favorite(_ post: Post) async throws
+    func unfavorite(_ post: Post) async throws
 }
 
 // MARK: - PostsRepositoryStub
@@ -23,22 +26,38 @@ protocol PostsRepositoryProtocol {
 struct PostsRepositoryStub: PostsRepositoryProtocol {
     let state: Loadable<[Post]>
     
-    func fetchPosts() async throws -> [Post] {
+    func fetchAllPosts() async throws -> [Post] {
+        return try await state.simulate()
+    }
+    
+    func fetchFavoritePosts() async throws -> [Post] {
         return try await state.simulate()
     }
     
     func create(_ post: Post) async throws {}
     
     func delete(_ post: Post) async throws {}
+    
+    func favorite(_ post: Post) async throws {}
+    
+    func unfavorite(_ post: Post) async throws {}
 }
 #endif
 
 // MARK: - PostsRepository
 
 struct PostsRepository: PostsRepositoryProtocol {
-    let postsReference = Firestore.firestore().collection("posts")
+    let postsReference = Firestore.firestore().collection("posts_v1")
     
-    func fetchPosts() async throws -> [Post] {
+    func fetchAllPosts() async throws -> [Post] {
+        return try await fetchPosts(from: postsReference)
+    }
+    
+    func fetchFavoritePosts() async throws -> [Post] {
+        return try await fetchPosts(from: postsReference.whereField("isFavorite", isEqualTo: true))
+    }
+    
+    func fetchPosts(from query: Query) async throws -> [Post] {
         let snapshot = try await postsReference
             .order(by: "timestamp", descending: true)
             .getDocuments()
@@ -55,6 +74,16 @@ struct PostsRepository: PostsRepositoryProtocol {
     func delete(_ post: Post) async throws {
         let document = postsReference.document(post.id.uuidString)
         try await document.delete()
+    }
+    
+    func favorite(_ post: Post) async throws {
+        let document = postsReference.document(post.id.uuidString)
+        try await document.setData(["isFavorite": true], merge: true)
+    }
+    
+    func unfavorite(_ post: Post) async throws {
+        let document = postsReference.document(post.id.uuidString)
+        try await document.setData(["isFavorite": false], merge: true)
     }
 }
 
