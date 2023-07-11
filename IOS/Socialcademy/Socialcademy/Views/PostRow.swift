@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-// MARK: - PostRow
-
 struct PostRow: View {
     @ObservedObject var viewModel: PostRowViewModel
     
@@ -25,6 +23,9 @@ struct PostRow: View {
                     .font(.caption)
             }
             .foregroundColor(.gray)
+            if let imageURL = viewModel.imageURL {
+                PostImage(url: imageURL)
+            }
             Text(viewModel.title)
                 .font(.title3)
                 .fontWeight(.semibold)
@@ -72,9 +73,32 @@ private extension PostRow {
             NavigationLink {
                 PostsList(viewModel: factory.makePostsViewModel(filter: .author(author)))
             } label: {
-                Text(author.name)
-                    .font(.subheadline)
-                    .fontWeight(.medium)
+                HStack {
+                    ProfileImage(url: author.imageURL)
+                        .frame(width: 32, height: 32)
+                    Text(author.name)
+                        .font(.subheadline)
+                        .fontWeight(.medium)
+                }
+            }
+        }
+    }
+}
+
+// MARK: - PostImage
+
+private extension PostRow {
+    struct PostImage: View {
+        let url: URL
+        
+        var body: some View {
+            AsyncImage(url: url) { image in
+                image
+                    .resizable()
+                    .scaledToFit()
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
+            } placeholder: {
+                Color.clear
             }
         }
     }

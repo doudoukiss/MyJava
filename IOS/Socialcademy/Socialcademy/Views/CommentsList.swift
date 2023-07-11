@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-// MARK: - CommentsList
-
 struct CommentsList: View {
     @StateObject var viewModel: CommentsViewModel
     

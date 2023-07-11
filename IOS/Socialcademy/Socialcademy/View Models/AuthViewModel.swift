@@ -16,6 +16,13 @@ class AuthViewModel: ObservableObject {
         authService.$user.assign(to: &$user)
     }
     
+    func makeViewModelFactory() -> ViewModelFactory? {
+        guard let user = user else {
+            return nil
+        }
+        return ViewModelFactory(user: user, authService: authService)
+    }
+    
     func makeSignInViewModel() -> SignInViewModel {
         return SignInViewModel(action: authService.signIn(email:password:))
     }
@@ -38,3 +45,4 @@ extension AuthViewModel {
         }
     }
 }
+

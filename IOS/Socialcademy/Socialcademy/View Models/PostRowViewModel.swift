@@ -1,14 +1,15 @@
 //
-//  PostsRowViewModel.swift
+//  PostRowViewModel.swift
 //  Socialcademy
 //
-//  Created by Seattle on 2023/7/8.
+//  Created by Seattle on 2023/7/9.
 //
+
 import Foundation
 
 @MainActor
 @dynamicMemberLookup
-class PostRowViewModel: ObservableObject {
+class PostRowViewModel: ObservableObject, StateManager {
     typealias Action = () async throws -> Void
     
     @Published var post: Post
@@ -33,21 +34,11 @@ class PostRowViewModel: ObservableObject {
         guard let deleteAction = deleteAction else {
             preconditionFailure("Cannot delete post: no delete action provided")
         }
-        withErrorHandlingTask(perform: deleteAction)
+        withStateManagingTask(perform: deleteAction)
     }
     
     func favoritePost() {
-        withErrorHandlingTask(perform: favoriteAction)
-    }
-    
-    private func withErrorHandlingTask(perform action: @escaping Action) {
-        Task {
-            do {
-                try await action()
-            } catch {
-                print("[PostRowViewModel] Error: \(error)")
-                self.error = error
-            }
-        }
+        withStateManagingTask(perform: favoriteAction)
     }
 }
+
