@@ -54,4 +54,46 @@ cafe.utf8.count
 cafee.utf8.count
 cafe == cafee //Canonically equivalent
 //NSString
+let nsCafe = NSString(characters: [0x43, 0x61, 0x66, 0xe9], length: 4)
+nsCafe.length
+let nsCafee = NSString(characters: [0x43, 0x61, 0x66, 0x65, 0x0301], length: 5)
+nsCafee.length
+
+let result = nsCafe.compare(nsCafee as String)
+result == ComparisonResult.orderedSame
+
+let circleCafee = cafee + "\u{20dd}"
+circleCafee.characters.count
+
+
+extension String: Collection {
+}
+
+var swift = "Swift is fun"
+swift.dropFirst(9)
+
+let cafee = "caf\u{0065}\u{0301}"
+cafee.dropFirst(4)
+cafee.dropLast(1)
+cafee.unicodeScalars.forEach { print($0) }
+cafee.utf8.forEach { print($0) }
+cafee.utf16.forEach { print($0) }
+let cafee = "caf\u{0065}\u{0301}"
+cafee.characters.count
+let index = cafee.index(cafee.startIndex, offsetBy: 3)
+
+extension String {
+    subscript(index: Int) -> Character {
+        guard let index = self.index(startIndex,
+            offsetBy: index, limitedBy: endIndex) else {
+            fatalError("String index out of range.")
+        }
+        return self[index]
+    }
+}
+for i in 0..<4 {
+    print(cafee[i])
+}
+
+cafee[index]
 
