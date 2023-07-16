@@ -97,3 +97,28 @@ for i in 0..<4 {
 
 cafee[index]
 
+let beg = cafee.startIndex
+let end = cafee.index(cafee.startIndex, offsetBy: 3)
+cafee[beg ..< end]
+
+String(cafee.characters.prefix(3))
+
+var mixStr = "Swift很有趣"
+
+for (index, value) in mixStr.characters.enumerated() {
+    print("\(index): \(value)")
+}
+if let index = mixStr.characters.index(of: "很") {
+    mixStr.insert(contentsOf: " 3.0".characters, at: index)
+}
+
+if let cnIndex = mixStr.characters.index(of: "很") {
+    mixStr.replaceSubrange(
+        cnIndex ..< mixStr.endIndex,
+        with: " is interesting!")
+}
+let swiftView = mixStr.characters.suffix(12).dropLast()
+String(swiftView)
+let strViews = mixStr.characters.split(separator: " ")
+strViews.map(String.init)
+
