@@ -630,4 +630,27 @@ let b = Base()
 let p: MyProtocol = b
 
 b.method3()
-p.method3() 
+p.method3()
+
+class Base: MyProtocol {
+    func method4() { print("Base.method4") }
+}
+
+class Subclass: Base {
+    override func method4() { print("Subclass.method4") }
+}
+
+class Base: NSObject {
+    func method5() { print("Base.method5") }
+}
+
+class Subclass: Base {
+}
+
+extension Subclass {
+    override func method5() { print("Subclass.method5") }
+}
+
+let base: Base = Subclass()
+base.method5()
+
