@@ -1,7 +1,6 @@
 NSString *tmp = nil;
 
 if ([tmp rangeOfString: @"Swift"].location != NSNotFound) {
-    // Will print out for nil string
     NSLog(@"Something about swift");
 }
 
@@ -31,13 +30,13 @@ func find(_ element: Element) -> Index? {
 
     while index != endIndex {
         if self[index] == element {
-            return index // Simplified for .some(index)
+            return index 
         }
 
         formIndex(after: &index)
     }
 
-    return nil // Simplified for .none
+    return nil 
 }
 
 switch index {
@@ -120,7 +119,6 @@ func arrayProcess(array: [Int]) -> String? {
         return nil
     }
 
-    // `firstNumber` could be used here safely
     return String(firstNumber)
 }
 
@@ -283,3 +281,34 @@ func !!<T>(optional: T?,
     if let value = optional { return value }
     fatalError(errorMsg)
 }
+
+infix operator !?
+
+func !?<T: ExpressibleByStringLiteral>(
+        optional: T?,
+        errorMsg: @autoclosure () -> String) -> T {
+    assert(optional != nil, errorMsg())
+    return optional ?? ""
+}
+
+record["type"] !? "Do not have a key named type"
+
+func !?<T: ExpressibleByStringLiteral>(
+    optional: T?,
+    nilDefault: @autoclosure () -> (errorMsg: String, value: T)) -> T {
+
+    assert(optional != nil, nilDefault().errorMsg)
+    return optional ?? nilDefault().value
+}
+
+record["type"] !? ("Do not have a key named type", "Free")
+
+record["type"]?.write(" account")
+
+func !?(optional: Void?, errorMsg: @autoclosure () -> String) {
+    assert(optional != nil, errorMsg())
+}
+
+record["type"]?
+    .write(" account")
+    !? "Do not have a key named type"
