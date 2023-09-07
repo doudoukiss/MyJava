@@ -48,7 +48,7 @@ class LoginViewController: UIViewController {
     
     private let loginButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Log in", for: .normal)
+        button.setTitle("Log In", for: .normal)
         button.layer.masksToBounds = true
         button.layer.cornerRadius = Constants.cornerRadius
         button.backgroundColor = .systemBlue
@@ -88,10 +88,15 @@ class LoginViewController: UIViewController {
     
 
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        
         loginButton.addTarget(self, action: #selector(didTapLoginButton), for: .touchUpInside)
+        
         createAccountButton.addTarget(self, action: #selector(didTapCreateAccountButton), for: .touchUpInside)
+        
         termsButton.addTarget(self, action: #selector(didTapTermsButton), for: .touchUpInside)
+        
         privacyButton.addTarget(self, action: #selector(didTapPrivacyButton), for: .touchUpInside)
         
         usernameEmailField.delegate = self
@@ -159,6 +164,32 @@ class LoginViewController: UIViewController {
         }
         
         // login functionality
+        var username: String?
+        var email: String?
+        
+        if usernameEmail.contains("@"), usernameEmail.contains(".") {
+            //email
+            email = usernameEmail
+        }
+        else {
+            //username
+        }
+        AuthManager.shared.loginUser(username: username, email: email, password: password, completion: { success in
+            DispatchQueue.main.async {
+                if success {
+                    // user logged in
+                    self.dismiss(animated: true, completion: nil)
+                }
+                else {
+                    // error occurred
+                    let alert = UIAlertController(title: "Log In Error", message: "We were unable to log you in.", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
+                    self.present(alert, animated: true)
+                }
+            }
+            
+        })
+        
     }
     
     @objc private func didTapTermsButton() {
@@ -179,7 +210,8 @@ class LoginViewController: UIViewController {
     
     @objc private func didTapCreateAccountButton() {
         let vc = RegistrationViewController()
-        present(vc, animated: true)
+        vc.title = "Create Account"
+        present(UINavigationController(rootViewController:vc), animated: true)
     }
 
 }
