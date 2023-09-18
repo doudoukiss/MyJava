@@ -15,6 +15,7 @@ class RMCharacterCollectionViewCell: UICollectionViewCell {
     private let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     } ()
@@ -43,6 +44,8 @@ class RMCharacterCollectionViewCell: UICollectionViewCell {
         contentView.backgroundColor = .secondarySystemBackground
         contentView.addSubviews(imageView, nameLabel, statusLabel)
         addConstraints()
+        setUpLayer()
+
     }
     
     required init?(coder: NSCoder) {
@@ -70,6 +73,19 @@ class RMCharacterCollectionViewCell: UICollectionViewCell {
 //        imageView.backgroundColor = .purple
 //        nameLabel.backgroundColor = .red
 //        statusLabel.backgroundColor = .orange
+    }
+    
+    private func setUpLayer() {
+        contentView.layer.cornerRadius = 8
+        contentView.layer.shadowColor = UIColor.label.cgColor
+        contentView.layer.cornerRadius = 4
+        contentView.layer.shadowOffset = CGSize(width: -4, height: 4)
+        contentView.layer.shadowOpacity = 0.3
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        setUpLayer()
     }
     
     override func prepareForReuse() {
