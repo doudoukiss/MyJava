@@ -1,5 +1,5 @@
 //
-//  CharacterListView.swift
+//  RMCharacterListView.swift
 //  RickAndMorty
 //
 //  Created by Seattle on 2023/9/18.
@@ -8,9 +8,9 @@
 import UIKit
 
 /// View that handles showing list of characters, loader, etc.
-final class CharacterListView: UIView {
+final class RMCharacterListView: UIView {
     
-    private let viewModel = CharacterListViewViewModel()
+    private let viewModel = RMCharacterListViewViewModel()
     
     private let spinner: UIActivityIndicatorView = {
         let spinner = UIActivityIndicatorView(style: .large)
@@ -27,9 +27,11 @@ final class CharacterListView: UIView {
         collectionView.isHidden = true
         collectionView.alpha = 0
         collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+        collectionView.register(RMCharacterCollectionViewCell.self, forCellWithReuseIdentifier: RMCharacterCollectionViewCell.cellIdentifier)
         return collectionView
     }()
+    
+    // MARK: - Init
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -52,17 +54,15 @@ final class CharacterListView: UIView {
     
     private func addConstraints() {
         NSLayoutConstraint.activate([
-        spinner.widthAnchor.constraint(equalToConstant: 100),
-        spinner.heightAnchor.constraint(equalToConstant: 100),
-        spinner.centerXAnchor.constraint(equalTo: centerXAnchor),
-        spinner.centerYAnchor.constraint(equalTo: centerYAnchor),
-        
-        collectionView.topAnchor.constraint(equalTo: topAnchor),
-        collectionView.leftAnchor.constraint(equalTo: leftAnchor),
-        collectionView.rightAnchor.constraint(equalTo: rightAnchor),
-        collectionView.bottomAnchor.constraint(equalTo: bottomAnchor)
-        
-        
+            spinner.widthAnchor.constraint(equalToConstant: 100),
+            spinner.heightAnchor.constraint(equalToConstant: 100),
+            spinner.centerXAnchor.constraint(equalTo: centerXAnchor),
+            spinner.centerYAnchor.constraint(equalTo: centerYAnchor),
+            
+            collectionView.topAnchor.constraint(equalTo: topAnchor),
+            collectionView.leftAnchor.constraint(equalTo: leftAnchor),
+            collectionView.rightAnchor.constraint(equalTo: rightAnchor),
+            collectionView.bottomAnchor.constraint(equalTo: bottomAnchor),
         ])
     }
     
