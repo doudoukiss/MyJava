@@ -7,13 +7,16 @@
 
 import Foundation
 
+/// manage for image loader
 final class RMImageLoader {
+    /// Shared instance
     static let shared = RMImageLoader()
-    
+    /// In memory data cache
     private var imageDataCache = NSCache<NSString, NSData>()
-    
+    /// Constructor
     private init() {}
-    
+    /// Get Image content with URL
+    /// Parameters: url: source url,  completion: Callback
     public func downloadImage(_ url: URL, completion: @escaping (Result<Data, Error>) -> Void) {
         let key = url.absoluteString as NSString
         if let data = imageDataCache.object(forKey: key) {
