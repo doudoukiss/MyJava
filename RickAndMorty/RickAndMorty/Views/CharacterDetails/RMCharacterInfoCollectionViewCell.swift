@@ -10,7 +10,7 @@ import UIKit
 final class RMCharacterInfoCollectionViewCell: UICollectionViewCell {
     static let cellIdentifier = "RMCharacterInfoCollectionViewCell"
     
-    private let valuaLabel: UILabel = {
+    private let valueLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -47,7 +47,7 @@ final class RMCharacterInfoCollectionViewCell: UICollectionViewCell {
         contentView.backgroundColor = .tertiarySystemBackground
         contentView.layer.cornerRadius = 8
         contentView.layer.masksToBounds = true
-        contentView.addSubviews(titleContainerView, valuaLabel, iconImageView)
+        contentView.addSubviews(titleContainerView, valueLabel, iconImageView)
         titleContainerView.addSubview(titleLabel)
         setUpConstraints()
     }
@@ -66,22 +66,23 @@ final class RMCharacterInfoCollectionViewCell: UICollectionViewCell {
             titleLabel.leftAnchor.constraint(equalTo: titleContainerView.leftAnchor),
             titleLabel.rightAnchor.constraint(equalTo: titleContainerView.rightAnchor),
             titleLabel.bottomAnchor.constraint(equalTo: titleContainerView.bottomAnchor),
-            titleLabel.topAnchor.constraint(equalTo: titleContainerView.bottomAnchor),
+            titleLabel.topAnchor.constraint(equalTo: titleContainerView.topAnchor),
             
             iconImageView.heightAnchor.constraint(equalToConstant: 30),
             iconImageView.widthAnchor.constraint(equalToConstant: 30),
             iconImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 35),
             iconImageView.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 20),
             
-            valuaLabel.leftAnchor.constraint(equalTo: iconImageView.rightAnchor, constant: 10),
-            valuaLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -10),
-            valuaLabel.topAnchor.constraint(equalTo: titleContainerView.topAnchor)
+            valueLabel.leftAnchor.constraint(equalTo: iconImageView.rightAnchor, constant: 10),
+            valueLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -10),
+            valueLabel.topAnchor.constraint(equalTo: contentView.topAnchor),
+            valueLabel.bottomAnchor.constraint(equalTo: titleContainerView.topAnchor)
         ])
     }
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        valuaLabel.text = nil
+        valueLabel.text = nil
         titleLabel.text = nil
         iconImageView.image = nil
         iconImageView.tintColor = .label
@@ -90,7 +91,7 @@ final class RMCharacterInfoCollectionViewCell: UICollectionViewCell {
     
     public func configure(with viewModel: RMCharacterInfoCollectionViewCellViewModel) {
         titleLabel.text = viewModel.title
-        valuaLabel.text = viewModel.displayValue
+        valueLabel.text = viewModel.displayValue
         iconImageView.image = viewModel.iconImage
         iconImageView.tintColor = viewModel.tintColor
         titleLabel.textColor = viewModel.tintColor
