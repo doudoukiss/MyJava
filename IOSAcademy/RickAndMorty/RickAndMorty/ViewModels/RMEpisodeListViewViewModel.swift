@@ -52,7 +52,7 @@ final class RMEpisodeListViewViewModel: NSObject {
     
     public func fetchEpisodes() {
         RMService.shared.execute(
-            .listCharactersRequests,
+            .listEpisodesRequest,
             expecting: RMGetAllEpisodesReponse.self
         ) { [ weak self ] result in
             switch result {

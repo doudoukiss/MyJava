@@ -42,7 +42,7 @@ final class RMCharacterListViewViewModel: NSObject {
     /// Fetch initial set of characters (20)
     func fetchCharacters() {
         RMService.shared.execute(
-            .listCharactersRequests,
+            .listCharactersRequest,
             expecting: RMGetAllChractersResponse.self
         ) { [weak self] result in
             switch result {
