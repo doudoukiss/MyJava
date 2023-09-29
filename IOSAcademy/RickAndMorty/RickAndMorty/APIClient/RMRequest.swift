@@ -65,11 +65,11 @@ final class RMRequest {
     public init(
         endpoint: RMEndpoint,
         pathComponents: [String] = [],
-        queryPrameters: [URLQueryItem] = []
+        queryParameters: [URLQueryItem] = []
     ) {
         self.endpoint = endpoint
         self.pathComponents = pathComponents
-        self.queryParameters = queryPrameters
+        self.queryParameters = queryParameters
     }
     
     /// Attempt to create request
@@ -113,7 +113,7 @@ final class RMRequest {
                 })
                 
                 if let rmEndpoint = RMEndpoint(rawValue: endpointString) {
-                    self.init(endpoint: rmEndpoint, queryPrameters: queryItems)
+                    self.init(endpoint: rmEndpoint, queryParameters: queryItems)
                     return
                 }
             }

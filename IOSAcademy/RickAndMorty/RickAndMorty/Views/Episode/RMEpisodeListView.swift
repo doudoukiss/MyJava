@@ -38,7 +38,7 @@ final class RMEpisodeListView: UIView {
                                 forCellWithReuseIdentifier: RMCharacterEpisodeCollectionViewCell.cellIdentifier )
         collectionView.register(RMFooterLoadingCollectionReusableView.self,
                                 forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter,
-                                withReuseIdentifier: RMFooterLoadingCollectionReusableView.indentifier)
+                                withReuseIdentifier: RMFooterLoadingCollectionReusableView.identifier)
         return collectionView
     } ()
     

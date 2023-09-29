@@ -48,12 +48,12 @@ final class RMEpisodeListViewViewModel: NSObject {
     
     private var cellViewModels: [RMCharacterEpisodeCollectionViewCellViewModel] = []
     
-    private var apiInfo: RMGetAllEpisodesReponse.Info? = nil
+    private var apiInfo: RMGetAllEpisodesResponse.Info? = nil
     
     public func fetchEpisodes() {
         RMService.shared.execute(
             .listEpisodesRequest,
-            expecting: RMGetAllEpisodesReponse.self
+            expecting: RMGetAllEpisodesResponse.self
         ) { [ weak self ] result in
             switch result {
             case .success(let responseModel):
@@ -80,7 +80,7 @@ final class RMEpisodeListViewViewModel: NSObject {
             return
         }
         
-        RMService.shared.execute(request, expecting: RMGetAllEpisodesReponse.self) { [ weak self] result in
+        RMService.shared.execute(request, expecting: RMGetAllEpisodesResponse.self) { [ weak self] result in
             guard let strongSelf = self else {
                 return
             }
@@ -140,7 +140,7 @@ extension RMEpisodeListViewViewModel: UICollectionViewDataSource, UICollectionVi
         guard kind == UICollectionView.elementKindSectionFooter,
               let footer = collectionView.dequeueReusableSupplementaryView(
                 ofKind: kind,
-                withReuseIdentifier: RMFooterLoadingCollectionReusableView.indentifier,
+                withReuseIdentifier: RMFooterLoadingCollectionReusableView.identifier,
                 for: indexPath
               ) as? RMFooterLoadingCollectionReusableView else {
             fatalError("Unsupported")

@@ -37,13 +37,13 @@ final class RMCharacterListViewViewModel: NSObject {
     
     private var cellViewModels: [RMCharacterCollectionViewCellViewModel] = []
     
-    private var apiInfo: RMGetAllChractersResponse.Info? = nil
+    private var apiInfo: RMGetAllCharactersResponse.Info? = nil
     
     /// Fetch initial set of characters (20)
     func fetchCharacters() {
         RMService.shared.execute(
             .listCharactersRequest,
-            expecting: RMGetAllChractersResponse.self
+            expecting: RMGetAllCharactersResponse.self
         ) { [weak self] result in
             switch result {
             case .success(let responseModel):
@@ -75,7 +75,7 @@ final class RMCharacterListViewViewModel: NSObject {
         }
         
         RMService.shared.execute(request,
-                                 expecting: RMGetAllChractersResponse.self) { [weak self] result in
+                                 expecting: RMGetAllCharactersResponse.self) { [weak self] result in
             guard let strongSelf = self else {
                 return
             }
@@ -134,7 +134,7 @@ extension RMCharacterListViewViewModel: UICollectionViewDataSource, UICollection
         guard kind == UICollectionView.elementKindSectionFooter,
             let footer = collectionView.dequeueReusableSupplementaryView(
             ofKind: kind,
-            withReuseIdentifier: RMFooterLoadingCollectionReusableView.indentifier,
+            withReuseIdentifier: RMFooterLoadingCollectionReusableView.identifier,
             for: indexPath
             ) as? RMFooterLoadingCollectionReusableView else {
             fatalError("Unsupported")
