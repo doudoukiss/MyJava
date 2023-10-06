@@ -15,7 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3D7F5F922AC91F1300776289 /* Spotify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spotify.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D7F5F922AC91F1300776289 /* Dancelanlan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dancelanlan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D7F5F952AC91F1300776289 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D7F5F972AC91F1300776289 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3D7F5F992AC91F1300776289 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,10 +35,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D35DF2E2ACF977C00CD17A6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3D7F5F992AC91F1300776289 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		3D7F5F892AC91F1300776289 = {
 			isa = PBXGroup;
 			children = (
-				3D7F5F942AC91F1300776289 /* Spotify */,
+				3D7F5F942AC91F1300776289 /* Dancelanlan */,
 				3D7F5F932AC91F1300776289 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -46,23 +54,23 @@
 		3D7F5F932AC91F1300776289 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3D7F5F922AC91F1300776289 /* Spotify.app */,
+				3D7F5F922AC91F1300776289 /* Dancelanlan.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3D7F5F942AC91F1300776289 /* Spotify */ = {
+		3D7F5F942AC91F1300776289 /* Dancelanlan */ = {
 			isa = PBXGroup;
 			children = (
+				3D35DF2E2ACF977C00CD17A6 /* Controllers */,
 				3D7F5FAE2AC9202B00776289 /* ViewModels */,
 				3D7F5FAD2AC9201400776289 /* Resources */,
 				3D7F5FAC2AC9200B00776289 /* Models */,
-				3D7F5FAB2AC9200200776289 /* ViewControllers */,
 				3D7F5FAA2AC91FFE00776289 /* Views */,
 				3D7F5FA92AC91FF400776289 /* Managers */,
 				3D7F5FA32AC91F1400776289 /* Info.plist */,
 			);
-			path = Spotify;
+			path = Dancelanlan;
 			sourceTree = "<group>";
 		};
 		3D7F5FA92AC91FF400776289 /* Managers */ = {
@@ -78,14 +86,6 @@
 				3D7F5FA02AC91F1400776289 /* LaunchScreen.storyboard */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		3D7F5FAB2AC9200200776289 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				3D7F5F992AC91F1300776289 /* ViewController.swift */,
-			);
-			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		3D7F5FAC2AC9200B00776289 /* Models */ = {
@@ -115,9 +115,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3D7F5F912AC91F1300776289 /* Spotify */ = {
+		3D7F5F912AC91F1300776289 /* Dancelanlan */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3D7F5FA62AC91F1400776289 /* Build configuration list for PBXNativeTarget "Spotify" */;
+			buildConfigurationList = 3D7F5FA62AC91F1400776289 /* Build configuration list for PBXNativeTarget "Dancelanlan" */;
 			buildPhases = (
 				3D7F5F8E2AC91F1300776289 /* Sources */,
 				3D7F5F8F2AC91F1300776289 /* Frameworks */,
@@ -127,9 +127,9 @@
 			);
 			dependencies = (
 			);
-			name = Spotify;
+			name = Dancelanlan;
 			productName = Spotify;
-			productReference = 3D7F5F922AC91F1300776289 /* Spotify.app */;
+			productReference = 3D7F5F922AC91F1300776289 /* Dancelanlan.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -147,7 +147,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3D7F5F8D2AC91F1300776289 /* Build configuration list for PBXProject "Spotify" */;
+			buildConfigurationList = 3D7F5F8D2AC91F1300776289 /* Build configuration list for PBXProject "Dancelanlan" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -160,7 +160,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3D7F5F912AC91F1300776289 /* Spotify */,
+				3D7F5F912AC91F1300776289 /* Dancelanlan */,
 			);
 		};
 /* End PBXProject section */
@@ -325,7 +325,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VJFD5DRS6S;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Spotify/Info.plist;
+				INFOPLIST_FILE = Dancelanlan/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -335,7 +335,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.seattle.Spotify;
+				PRODUCT_BUNDLE_IDENTIFIER = com.seattle.Dancelanlan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -352,7 +352,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VJFD5DRS6S;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Spotify/Info.plist;
+				INFOPLIST_FILE = Dancelanlan/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -362,7 +362,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.seattle.Spotify;
+				PRODUCT_BUNDLE_IDENTIFIER = com.seattle.Dancelanlan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -373,7 +373,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3D7F5F8D2AC91F1300776289 /* Build configuration list for PBXProject "Spotify" */ = {
+		3D7F5F8D2AC91F1300776289 /* Build configuration list for PBXProject "Dancelanlan" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3D7F5FA42AC91F1400776289 /* Debug */,
@@ -382,7 +382,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3D7F5FA62AC91F1400776289 /* Build configuration list for PBXNativeTarget "Spotify" */ = {
+		3D7F5FA62AC91F1400776289 /* Build configuration list for PBXNativeTarget "Dancelanlan" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3D7F5FA72AC91F1400776289 /* Debug */,
