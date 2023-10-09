@@ -1,2 +1,2 @@
-# LanLan Music
-This is a IOS application project of a college class. This application make use of Spotify API. Thanks!
+# LanLan's Music Hall
+This is an IOS application project for a college class. This application makes use of the Spotify API. Thanks!
