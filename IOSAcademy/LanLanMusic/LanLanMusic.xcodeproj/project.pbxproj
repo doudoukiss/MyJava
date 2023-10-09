@@ -31,9 +31,13 @@
 		3D777F9B2AD2D84C00DD5957 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D777F9A2AD2D84C00DD5957 /* UserProfile.swift */; };
 		3D777F9D2AD2F33100DD5957 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D777F9C2AD2F33100DD5957 /* Extensions.swift */; };
 		3D777F9F2AD3118300DD5957 /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D777F9E2AD3118300DD5957 /* AuthResponse.swift */; };
+		3DD758F82AD3CC35007D7B53 /* APIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD758F72AD3CC35007D7B53 /* APIImage.swift */; };
+		3DD758FA2AD3D856007D7B53 /* SettingsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD758F92AD3D856007D7B53 /* SettingsModels.swift */; };
+		8D19C76B0D5201B49965E76A /* Pods_LanLanMusic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 821DDE6692ABC2FE1C657C42 /* Pods_LanLanMusic.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		19A6D9D5F8AB7FA1941657EF /* Pods-LanLanMusic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LanLanMusic.debug.xcconfig"; path = "Target Support Files/Pods-LanLanMusic/Pods-LanLanMusic.debug.xcconfig"; sourceTree = "<group>"; };
 		3D777F5B2AD2D32600DD5957 /* LanLanMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LanLanMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D777F5E2AD2D32600DD5957 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D777F602AD2D32600DD5957 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +64,10 @@
 		3D777F9A2AD2D84C00DD5957 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		3D777F9C2AD2F33100DD5957 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		3D777F9E2AD3118300DD5957 /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
+		3DD758F72AD3CC35007D7B53 /* APIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIImage.swift; sourceTree = "<group>"; };
+		3DD758F92AD3D856007D7B53 /* SettingsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModels.swift; sourceTree = "<group>"; };
+		5105BFA0685651C134B913D3 /* Pods-LanLanMusic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LanLanMusic.release.xcconfig"; path = "Target Support Files/Pods-LanLanMusic/Pods-LanLanMusic.release.xcconfig"; sourceTree = "<group>"; };
+		821DDE6692ABC2FE1C657C42 /* Pods_LanLanMusic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LanLanMusic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D19C76B0D5201B49965E76A /* Pods_LanLanMusic.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +87,8 @@
 			children = (
 				3D777F5D2AD2D32600DD5957 /* LanLanMusic */,
 				3D777F5C2AD2D32600DD5957 /* Products */,
+				F606BB9854E7F13F8337EC3A /* Pods */,
+				50A04BD89A403D56954C5526 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,6 +151,8 @@
 				3D777F982AD2D82A00DD5957 /* Artist.swift */,
 				3D777F9A2AD2D84C00DD5957 /* UserProfile.swift */,
 				3D777F9E2AD3118300DD5957 /* AuthResponse.swift */,
+				3DD758F72AD3CC35007D7B53 /* APIImage.swift */,
+				3DD758F92AD3D856007D7B53 /* SettingsModels.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -185,6 +198,23 @@
 			path = Others;
 			sourceTree = "<group>";
 		};
+		50A04BD89A403D56954C5526 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				821DDE6692ABC2FE1C657C42 /* Pods_LanLanMusic.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F606BB9854E7F13F8337EC3A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				19A6D9D5F8AB7FA1941657EF /* Pods-LanLanMusic.debug.xcconfig */,
+				5105BFA0685651C134B913D3 /* Pods-LanLanMusic.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -192,9 +222,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3D777F6F2AD2D32700DD5957 /* Build configuration list for PBXNativeTarget "LanLanMusic" */;
 			buildPhases = (
+				2319364B2B3C6432DDD33254 /* [CP] Check Pods Manifest.lock */,
 				3D777F572AD2D32600DD5957 /* Sources */,
 				3D777F582AD2D32600DD5957 /* Frameworks */,
 				3D777F592AD2D32600DD5957 /* Resources */,
+				BD06DC2FE3F35C02EA8FF103 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -250,14 +282,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2319364B2B3C6432DDD33254 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LanLanMusic-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD06DC2FE3F35C02EA8FF103 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LanLanMusic/Pods-LanLanMusic-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LanLanMusic/Pods-LanLanMusic-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LanLanMusic/Pods-LanLanMusic-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3D777F572AD2D32600DD5957 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				3D777F7B2AD2D71500DD5957 /* SearchViewController.swift in Sources */,
+				3DD758F82AD3CC35007D7B53 /* APIImage.swift in Sources */,
 				3D777F952AD2D81500DD5957 /* Playlist.swift in Sources */,
 				3D777F8F2AD2D7DE00DD5957 /* AuthManager.swift in Sources */,
+				3DD758FA2AD3D856007D7B53 /* SettingsModels.swift in Sources */,
 				3D777F832AD2D76900DD5957 /* WelcomeViewController.swift in Sources */,
 				3D777F872AD2D78500DD5957 /* ProfileViewController.swift in Sources */,
 				3D777F792AD2D6B700DD5957 /* TabBarViewController.swift in Sources */,
@@ -410,6 +486,7 @@
 		};
 		3D777F702AD2D32700DD5957 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19A6D9D5F8AB7FA1941657EF /* Pods-LanLanMusic.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -429,6 +506,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.seattle.LanLanMusic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -437,6 +517,7 @@
 		};
 		3D777F712AD2D32700DD5957 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5105BFA0685651C134B913D3 /* Pods-LanLanMusic.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -456,6 +537,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.seattle.LanLanMusic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
