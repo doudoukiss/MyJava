@@ -19,6 +19,7 @@
 		3DAD368D2AF629FB00E2CF92 /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAD368C2AF629FB00E2CF92 /* VideoPlayerViewController.swift */; };
 		3DAD368F2AF62A0D00E2CF92 /* NewConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAD368E2AF62A0D00E2CF92 /* NewConversationViewController.swift */; };
 		3DAD36912AF62A2300E2CF92 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAD36902AF62A2300E2CF92 /* ProfileViewController.swift */; };
+		3DAD36942AF62FD200E2CF92 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAD36932AF62FD200E2CF92 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		3DAD368C2AF629FB00E2CF92 /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
 		3DAD368E2AF62A0D00E2CF92 /* NewConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConversationViewController.swift; sourceTree = "<group>"; };
 		3DAD36902AF62A2300E2CF92 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		3DAD36932AF62FD200E2CF92 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,8 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				3DAD36712AF625AB00E2CF92 /* ConversationsViewController.swift */,
-				3DAD36862AF629CB00E2CF92 /* LoginViewController.swift */,
-				3DAD36882AF629DD00E2CF92 /* RegisterViewController.swift */,
+				3DAD36922AF62AE800E2CF92 /* Login */,
 				3DAD368A2AF629ED00E2CF92 /* PhotoViewerViewController.swift */,
 				3DAD368C2AF629FB00E2CF92 /* VideoPlayerViewController.swift */,
 				3DAD368E2AF62A0D00E2CF92 /* NewConversationViewController.swift */,
@@ -112,6 +113,7 @@
 			children = (
 				3DAD366D2AF625AB00E2CF92 /* AppDelegate.swift */,
 				3DAD366F2AF625AB00E2CF92 /* SceneDelegate.swift */,
+				3DAD36932AF62FD200E2CF92 /* Extensions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -123,6 +125,15 @@
 				3DAD36782AF625AC00E2CF92 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		3DAD36922AF62AE800E2CF92 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				3DAD36862AF629CB00E2CF92 /* LoginViewController.swift */,
+				3DAD36882AF629DD00E2CF92 /* RegisterViewController.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +212,7 @@
 				3DAD368F2AF62A0D00E2CF92 /* NewConversationViewController.swift in Sources */,
 				3DAD36722AF625AB00E2CF92 /* ConversationsViewController.swift in Sources */,
 				3DAD368D2AF629FB00E2CF92 /* VideoPlayerViewController.swift in Sources */,
+				3DAD36942AF62FD200E2CF92 /* Extensions.swift in Sources */,
 				3DAD366E2AF625AB00E2CF92 /* AppDelegate.swift in Sources */,
 				3DAD36912AF62A2300E2CF92 /* ProfileViewController.swift in Sources */,
 				3DAD36702AF625AB00E2CF92 /* SceneDelegate.swift in Sources */,
@@ -355,7 +367,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Messenger/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
@@ -366,9 +378,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.seattle.Messenger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -383,7 +398,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Messenger/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
@@ -394,9 +409,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.seattle.Messenger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
