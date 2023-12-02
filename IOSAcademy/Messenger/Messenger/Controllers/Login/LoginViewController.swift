@@ -67,12 +67,17 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         title = "Log In"
         view.backgroundColor = .systemPink
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Register", style: .done, target: self, action: #selector(didTapRegister))
         
-        loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
+        loginButton.addTarget(
+            self,
+            action: #selector(loginButtonTapped),
+            for: .touchUpInside
+        )
         
         emailField.delegate = self
         passwordField.delegate = self
@@ -109,15 +114,14 @@ class LoginViewController: UIViewController {
     @objc private func loginButtonTapped() {
         emailField.resignFirstResponder()
         passwordField.resignFirstResponder()
-        guard let email = emailField.text, let password = passwordField.text, !email.isEmpty, !password.isEmpty, password.count >= 6 else {
+        guard let email = emailField.text, let password = passwordField.text,
+                !email.isEmpty, !password.isEmpty, password.count >= 6 else {
             alertUserLoginError()
             return
         }
         
         // Firebase login
-        FirebaseAuth.Auth.auth().signIn(withEmail: email, password: password, completion: { [weak self] authResult, error in
-            guard let strongSelf = self else {
-                
+        FirebaseAuth.Auth.auth().signIn(withEmail: email, password: password, completion: { [weak self] authResult, error in guard let strongSelf = self else {
                 return
             }
             

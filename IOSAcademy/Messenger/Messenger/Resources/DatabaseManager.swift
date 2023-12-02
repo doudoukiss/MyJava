@@ -10,9 +10,13 @@ import FirebaseDatabase
 
 final class DatabaseManager {
     
-    static let shared = DatabaseManager()
+    public static let shared = DatabaseManager()
     
     private let database = Database.database(url: "https://messenger-38a25-default-rtdb.asia-southeast1.firebasedatabase.app").reference()
+    
+    public func test() {
+        database.child("Ginza").setValue(["something": true])
+    }
     
     static func safeEmail(emailAddress: String) -> String {
         var safeEmail = emailAddress.replacingOccurrences(of: ".", with: "-")
@@ -27,8 +31,8 @@ extension DatabaseManager {
     public func userExists(with email: String,
                                 completion: @escaping ((Bool) -> Void)) {
         let safeEmail = DatabaseManager.safeEmail(emailAddress: email)
-        database.child(email).observeSingleEvent(of: .value, with: { snapshot in
-            guard snapshot.value as? String != nil else {
+        database.child(safeEmail).observeSingleEvent(of: .value, with: { snapshot in
+            guard snapshot.value as? [String: Any] != nil else {
                 completion(false)
                 return
             }
